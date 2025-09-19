@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dry Fruits Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdf6ec;
+    }
+
+    header {
+      background: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background: #5a3220;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #8B4513;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #8B4513;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #6a2f13;
+    }
+
+    footer {
+      background: #5a3220;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dry Fruits Store</h1>
+    <p>Healthy • Natural • Delicious</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Our Store</h2>
+    <p>We provide fresh and high-quality dry fruits for a healthy lifestyle.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://img.freepik.com/premium-photo/almonds-isolated-white-background_252965-339.jpg" alt="Almonds">
+        <h3>Almonds</h3>
+        <p>Rich in protein & vitamins.</p>
+      </div>
+      <div class="card">
+        <img src="https://www.pngguru.in/storage/uploads/images/Cashew%20bowl%20png%20%7C%20cashew%20Nuts%20png%20image_1650277370_1927749527.webp" alt="Cashews">
+        <h3>Cashews</h3>
+        <p>Delicious & crunchy snack.</p>
+      </div>
+      <div class="card">
+        <img src="https://png.pngtree.com/png-vector/20240805/ourlarge/pngtree-bowl-of-raisins-png-image_13386121.png" alt="Raisins">
+        <h3>Raisins</h3>
+        <p>Sweet and full of energy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="sendMessage(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <p id="output" style="color: green; margin-top: 10px;"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dry Fruits Store | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      document.getElementById("output").innerText = "✅ Thank you! We will get back to you soon.";
+    }
+  </script>
+</body>
+</html>
